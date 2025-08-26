@@ -54,5 +54,11 @@ df -h
 ```
 [add verifuication screenshot here]
 
-Screenshots:
-Include before/after images here
+
+
+📚 Key Takeaways
+- Always check lsblk before running growpart to confirm your device name (nvme0n1, xvda).
+- cloud-guest-utils contains the essential growpart command.
+- The two-step process: 1. growpart (resizes partition), 2. resize2fs (resizes filesystem).
+- Modifying the volume in the AWS console does not automatically resize the OS filesystem.
+- Problem Solved! Your instance now has the expanded storage available.
