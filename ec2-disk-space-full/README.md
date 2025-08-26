@@ -1,12 +1,27 @@
 # Challenge #1: Disk Space Full on EC2
 
 **Scenario:**  
-Created a file that fills 8GB of disk space:
+you ec2 instance disk is full.
 
+
+## Step 1: Simulate the Problem (Fill the Disk)
 ```bash
 fallocate -l 8G new_file 
 ```
-## to create a file which will take 8 gb storage
+# Check disk usage to confirm it's full
+df -h
+
+[add problem screenshot herre]
+
+solution:
+# Step 2: Expand the EBS Volume in the AWS Consolego to instance and modify volume(modify it from 8gb to 29gb)
+1. Go to the EC2 Dashboard > Volumes.
+2. Find the volume attached to your instance.
+3. Select the volume and click Actions > Modify.
+4. Increase the size (e.g., from 8 GiB to 29 GiB).
+
+Click Modify.
+[add ec2 volume screenshot here]
 
 Problem:
 After modifying the EC2 volume (8GB → 29GB), the system still shows the old size.
@@ -16,6 +31,8 @@ Solution:
 Install required utils:
 sudo apt install cloud-guest-utils
 ```
+# Step 3: Expand the Partition and Filesystem on the Instance
+Modifying the volume in AWS only expands the hardware. You must now expand the software (partition and filesystem) to use the new space.
 
 Resize partition and filesystem:
 ## Note: use commands considering which virtualized storage your machine uses
@@ -35,6 +52,7 @@ Verify:
 ```bash
 df -h
 ```
+[add verifuication screenshot here]
 
 Screenshots:
 Include before/after images here
