@@ -12,7 +12,8 @@ fallocate -l 8G new_file
 df -h
 
 
-[add problem screenshot herre]
+<img width="793" height="834" alt="Screenshot 2025-08-26 193512" src="https://github.com/user-attachments/assets/e14cb5c0-2e1d-4625-8c11-428d531e731d" />
+
 
 solution:
 # Step 2: Expand the EBS Volume in the AWS Consolego to instance and modify volume(modify it from 8gb to 29gb)
@@ -21,8 +22,11 @@ solution:
 3. Select the volume and click Actions > Modify.
 4. Increase the size (e.g., from 8 GiB to 29 GiB).
 
+
+
 Click Modify.
-[add ec2 volume screenshot here]
+  <img width="1620" height="723" alt="Screenshot 2025-08-26 194627" src="https://github.com/user-attachments/assets/4b5c1e45-3d20-4bd9-8cbc-caeab6cca456" />
+  <img width="1616" height="700" alt="Screenshot 2025-08-26 195105" src="https://github.com/user-attachments/assets/f601fba5-6845-4f60-8179-349f75babad9" />
 
 Problem:
 After modifying the EC2 volume (8GB → 29GB), the system still shows the old size.
