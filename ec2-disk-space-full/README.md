@@ -11,6 +11,7 @@ fallocate -l 8G new_file
 # Check disk usage to confirm it's full
 df -h
 
+
 [add problem screenshot herre]
 
 solution:
@@ -52,8 +53,7 @@ Verify:
 ```bash
 df -h
 ```
-[add verifuication screenshot here]
-
+<img width="965" height="471" alt="Screenshot 2025-08-26 200645" src="https://github.com/user-attachments/assets/ea43ae58-2a9f-4caa-bdde-60ad9f089606" />
 
 
 📚 Key Takeaways
