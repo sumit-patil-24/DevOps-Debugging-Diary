@@ -160,29 +160,14 @@ curl localhost:8080
 docker run --rm webapp-debug cat app.js | grep listen
 ```
 
-### 2. Use Environment Variables
-```dockerfile
-# In Dockerfile
-ENV PORT=3000
-EXPOSE $PORT
-```
 
-### 3. Standardize Port Mapping
+### 2. Standardize Port Mapping
 ```bash
 # Use consistent mapping pattern
 docker run -d -p HOST_PORT:CONTAINER_PORT image
 ```
 
-### 4. Document Port Requirements
-```yaml
-# docker-compose.yml
-version: '3'
-services:
-  webapp:
-    build: .
-    ports:
-      - "8080:3000"  # host:container
-```
+
 
 ---
 
