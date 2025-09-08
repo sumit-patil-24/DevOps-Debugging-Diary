@@ -11,11 +11,13 @@ The BackOff part indicates that Kubernetes will keep trying to pull the image, w
 
 Kubernetes raises the delay between each attempt until it reaches a compiled-in limit, which is 300 seconds (5 minutes).
 
+
 # Invalid Image
 
 `ImagePullBackoff` can be caused if the pod runs with an invalid image or typo in the image name or even a non-existent image.
 
 Watch the demo on the youtube channel for practical understanding.
+
 
 # Private Image
 
